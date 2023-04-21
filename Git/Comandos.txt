@@ -1,0 +1,130 @@
+//// Verificar versão
+    git --version 
+
+//// Configurando o GIT
+
+    // Listar todas as configurações
+    git config --list 
+
+    // Configurar algumas coisas
+    git config --global user.name "Gabriel" 
+    git config --global user.email "gabrielcardoso_stelo@hotmail.com"
+    git config --global core.editor "vscode" 
+
+    // Ver informações especificas
+    git config user.name
+
+//// INICIAR REPOSITÓRIO
+
+    git init 
+
+
+///// BREANCH, README E COMMIT
+
+    Branch - São versões 
+
+    Commit - Enviar para o git 
+
+    README.md ou README.txt - Onde fica instruções e informações descritivas.
+
+
+    /// MOSTRAR O QUE FOI MODIFICADO
+        git status
+
+    /// FAZER O GIT MONITORAR ARQUIVOS  
+        git add -A ou nomeArquivo.ext
+
+    /// FAZER COMMIT
+        git commit -m "Primeiro commit"
+
+        git commit -am "sasas" // Monitora e commita os que já estavam sendo monitorados.
+
+    /// VER TODOS OS COMMITS FEITOS NA BRANCH ATUAL
+        git log
+
+/// REVERTENDO MODIFICAÇÕES
+
+    // RESETAR 
+
+        --soft - Volta com os arquivos prontos para serem commitados
+
+        --mixed - Faz a mesma coisa que -soft mas não prepara para commitar
+
+        --hard - Ignora tudo que já existiu e volta para  o commit penúltimo commit
+
+        git reset [--soft, --mixed, --hard]
+
+//// TRABALHAR COM DIFERENTES BRANCHS 
+
+     // VER A BRANCH QUE ESTOU E LISTAR AS BRANCHS
+        git branch
+    
+    // CRIAR BRANCH     
+
+        - Ao criar a branch nova assume o ponto da branch anterior e oque fizer vai ser dela.
+
+        git branch [NomeQueEuQuero]
+
+    // TROCAR DE BRANCH 
+        
+        git checkout [NomeDaBranch]
+
+/// DIFERENÇA ENTRE ARQUIVOS 
+
+    // MOSTRAR ALTERAÇÕES NO ARQUIVO, O QUE FOI FEITO
+        git diff
+    
+    // MOSTRAR APENAS O NOME DOS ARQUIVOS MODIFICADOS 
+        git diff --name-only
+
+
+    // MOSTRAR APENAS O QUE FOI ALTERADO EM UM ARQUIVO
+        git diff [arquivo.ext]
+
+    // VOLTAR MODIFICAÇÕES DE APENAS UM ARQUIVO, EXEMPLO. ESCREVI "A" E DEPOIS "ALO", QUERO VOLTAR.
+
+        git checkout HEAD -- [arquivo.css]
+
+
+// Conectando repositório local ao remoto
+
+    // LIGANDO REPOSITÓRIO REMOTO COM LOCAL
+        git remote add [nomeQueEuQueroProRepositorio] url
+    
+    // VER REPOSITÓRIOS ADICIONADOS
+        git remote
+            ou 
+        git remote -v // Mostra as opções que eu tenho 
+
+    // ENVIAR DO LOCAL PARA O REMOTO    
+        git push -u [nomeDoRepositorio] [branch]
+            ou 
+        git push [nomeDoRepositorio] [branch]
+
+// Ignorando arquivos do repositório (gitignore)
+
+    // CRIAR UM ARQUIVO CHAMADO .gitignore 
+        dentro dele posso por nomes de arquivos para serem ignorados 
+
+// REVERTENDO SEM PERDER O CÓDIGO (Revert)
+
+    // VOLTAR COMMIT SEM PERDER CÓDIGO
+        git revert --no-edit [codigoCommit]
+
+// DELETANDO BRANCHES LOCAIS E REMOTOS
+
+    // REMOVER BRANCH REMOTO 
+        git push [nomeDoRepositorio] :[branch]
+
+    // REMOVER BRANCH LOCAL 
+        git branch -D teste
+
+// PUXANDO ALTERAÇÕES DE OUTRAS PESSOAS (PULL)
+
+    // TRAZER AS COISAS DO REMOTO PARA LOCAL 
+        git pull [nomeRepositorio] [branch]
+
+// CLONANDO REPOSITÓRIO REMOTO
+
+    // CLONAR   
+        git clone url

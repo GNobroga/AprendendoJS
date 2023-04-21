@@ -1,0 +1,6 @@
+Problemas
+    João não conseguia voltar alterações em seus arquivos.
+    João não conseguia trabalhar em equipe
+
+Versionamento
+    
