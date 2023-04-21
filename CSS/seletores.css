@@ -1,0 +1,121 @@
+
+/* Seletores gerais de irmãos */
+
+    /*Irá corresponder a todo elemento <span> que seguir um elemento <p> dentro de um mesmo elemento pai */
+
+p ~ span { 
+    color: red;
+}
+
+
+/* Seletores de irmãos adjacents */
+
+    /* Irá corresponder a qualquer elemento li que segue imediatamente após um elemento ul*/
+
+ul + li { 
+    color: pink;
+}
+
+/* Seletor de filhos */
+
+    /* Irá corresponder a todo elemento <li> que estiver diretamente dentro de um elemento <ul> especificado.*/
+
+ul > li {
+    color: black;
+}
+
+
+/* Seletor de descendentes */
+
+    /*<< div span>> irá corresponder a todo e qualquer elemento <span> que estiver dentro do elemento <div>.*/
+
+ul li {
+    color: silver;
+}
+
+/* Seleciona a primeira linha */
+p::first-line {
+    font-variant: small-caps;
+}
+
+/* Altera o marcador de lista */
+ul > li::marker {
+    content: "*";
+}
+
+
+/* SELETORES BASEADO EM VALOR DE ATRIBUTO */
+
+a[href ^="http"] { /* Seleciona os "a" que começa com o valor do atributo como sendo http*/
+
+}
+
+a[href $="http"] { /* Seleciona os "a" que terminal com o valor do atributo como sendo http*/
+
+}
+
+input:not(:first-of-type) { /* Not é excludente */
+
+}
+
+input:focus { /* Quando o foco estiver no input */
+
+}
+
+input:required { /* Seletor para inputs required */
+
+}
+
+input:valid { /* Seleciona inputs sem required*/
+
+}
+
+input:invalid { /* Seleciona inputs com required*/
+    background: url() no-repreat 95% 50% #000;
+}
+
+
+input[type=number]:in-range {
+
+}
+
+input[type=number]:out-of-range {
+    
+}
+
+
+input[type=text]:disabled {
+    
+}
+
+input[type=checkbox]:checked {
+    
+}
+
+input[type=text]:read-only {
+    
+}
+
+input[type=text]:read-write {
+    
+}
+
+
+/* Seletores para tabela */
+
+table {
+    border-collapse: collapse;
+}
+
+
+table tr:nth-child(1){ // Pega do primeiro para o último - even, odd
+    color: pink;
+}
+
+table tr:nth-last-child(1){ // Pega do último para o primeiro
+    color: pink;
+}
+
+table tr:nth-of-type(3) { // O terceiro elemento do tipo tr que esteja dentro da table;
+
+}

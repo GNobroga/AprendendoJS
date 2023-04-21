@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--  
+
+        Table propriedades:
+
+            border
+            width
+            align - Alinhar conteúdo
+            cellpadding - É o padding
+            cellspacing - É o margin
+            bgcolor
+            frame - Define o outline da tabela (void, below, abover, hsides, vsides, lhs, rhs, box)
+            rules - Divisao entre linhas e colunas  (none, rows, cols, all)
+
+
+            colspan 
+            rowspan
+
+    -->
+
+    <div class="container">
+        <table border="1" width="50%" align="center"> 
+            <caption>Título da tabela</caption> <!-- Colocar um título para a tabela -->
+           <thead>
+                <tr>
+                    <th colspan="2">ID</th>
+                    <th>Preço</th>
+                </tr>
+           </thead>
+           <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Computador</td>
+                    <td>1.500,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Celular</td>
+                    <td>9.500,15</td>
+                </tr>
+           </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>R$</td>
+                    <td>11.000,15</td>
+                </tr>
+            </tfoot>
+
+
+        </table>
+    </div>
+    
+</body>
+</html>

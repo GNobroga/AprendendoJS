@@ -1,0 +1,6 @@
+CREATE DATABASE aula;
+
+CREATE TABLE aluno (
+    codigo SERIAL,
+    nome CHARACTER VARYING(255) NOT NULL
+);

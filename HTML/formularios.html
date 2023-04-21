@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+
+        Form:
+
+            É usado para coletar dados e enviar para um servidor Web. 
+
+            Properties:
+            
+               action - Padrão é a própria página
+               method - O padrão é GET, POST
+    -->
+
+    <div class="container">
+        <form>
+            <label>
+                Full name: <br>
+                <input type="text" name="FullName">
+            </label>
+    
+            <fieldset> <!-- Conjunto de campos -->
+                <legend>GÊNERO</legend>  <!-- Legenda -->
+                <label>
+                    <input type="radio" value="M">
+                    <span>Masculino</span>
+                </label>
+                <label>
+                    <input type="radio" value="F">
+                    <span>Feminino</span>
+                </label>
+            </fieldset>
+
+            <!-- Select 1 -->
+
+            <select name="Estado">
+                <optgroup label="Sul"> <!-- Cria um grupo de options -->
+                    <option value="ES" selected>Espírito Santo</option>
+                </optgroup>
+                <option value="SP" selected>São Paulo</option>
+            </select>
+
+            <!-- 
+                Select 2 
+            
+                    Properties:
+
+                        size - Define quantos elementos serão exibidos de uma vez
+                        multiple - Permite multipla seleção de option
+            
+            -->
+
+            <select name="linguagens" size="2">
+                <option value="HTML" selected>Hipertext Markup Language</option>
+                <option value="JavaScript" selected>JavaScript</option>
+                <option value="Python" selected>Python</option>
+            </select>
+
+
+            <!-- 
+
+                Utilizando o elemento datalist
+            -->
+
+            <div>
+
+                <label>
+                    Assunto: <br>
+                    <input type="text" name="textoAssunto" list="cidades">
+                </label>
+
+                <datalist id="cidades">
+                    <option value="Castelo">
+                    <option value="Sao paulo">
+                </datalist>
+
+            </div>
+
+            <!-- 
+
+                Textarea - Permite digitação em várias linhas
+
+            -->
+
+            <div>
+                <textarea name="textoDescricao" cols="30" rows="10"></textarea>
+            </div>
+
+
+            <label>
+                <input type="checkbox">
+                <span>Aceito os termos</span>
+            </label>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+
+        </form>
+    </div>
+    
+</body>
+</html>

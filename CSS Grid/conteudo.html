@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="conteudo_style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--  
+
+        Entidades:
+            Container - Terá o display grid;
+            Item
+
+        Conceito:
+            O grid é como se fosse uma tabela, então o que se aplica em uma coluna
+            será aplicado em todos os itens daquela coluna. Definimos o grid através
+            das colunas.
+
+
+        Propriedades CSS de Container:
+            
+            Criar colunas:
+
+                grid-template-columns: 100px 100px 100px 100px; - Criando 4 colunas fixas
+                grid-template-columns: auto auto; - Criando duas colunas automaticas
+            
+            Rows:
+
+                grid-templa-rows: 100px 200px; - Serve para aumentar o tamanho da linha
+            
+
+            Unidade FR:
+
+                Ela foi criada especilamente para o GRID, ela representa uma fração do grid
+                e é totalmente flexível, ou seja, é similar a propriedade flex do flex-box.
+
+                Diferença entre FR e AUTO:
+
+                    auto - Não considera o gap, diferente do fr
+            
+            gaps (Espaço entre itens):
+                grid-column-gap
+                grid-row-gap
+                grid-gap
+                gap - Substituiu o grid-gap
+
+            Repeat (Repetir):
+
+                grid-template-columns: repeat(quantidade, 100px); - Repete 100px algumas quantidade de vezes. 
+                grid-template-columns: 100px repeat(3, 100px) 200px; - Criando 5 colunas, 3 com o repeat.
+                grid-template-columns: repeat(2, 100px) 200px; - Criando 3 colunas, 2 com repeat. 
+                grid-template-columns: repeat(2, 100px 200px) - Vai repetir esse padrão duas vezes 100px 200px 100px 200px 
+                grid-template-columns: repeat(auto-fill, 300px);
+
+                    auto-fill - Preenche colunas automaticamente enquanto tiver espaço com o tamanho especificado.
+
+                grid-template-columns: repeat(2, minmax(50px, 200px)); - Vai repetir duas tabelas com no mínimo 50px de e no máximo 200px de largura.
+
+
+
+            Definir altura padrão para linhas:
+
+                grid-auto-rows: tamanho; EX: tamanho = 200px;
+                grid-auto-rows: minmax(tamanho_minimo, tamanho_maximo);
+                    minmax faz o apanhado de todas as linhas ver qual tem o conteúdo maior
+                    e aplica o tamanho em todas.
+                grid-auto-rows: minmax(tamanho_minimo, auto);
+                    auto - deixa o conteúdo dinâmico.
+
+            Posicionamento (Container):
+
+                justify-content - São os mesmos do flex-box 
+                align-items - São os mesmos do flex-box, alinha dentro da linha;
+                align-content - São os mesmos do flex-box, a linha todos os itens.
+
+            Mesclando itens:
+
+                Colunas:
+                    grid-column-start: valor;
+                    grid-column-end: valor;
+
+                Linhas:
+                    grid-row-start: valor;
+                    grid-row-end valor;
+
+                    pra usar o grid-row-start e end é necessário primeiro definir
+                    o grid-column-start e end
+                
+                Shorthands:
+
+                    Colunas:
+                        grid-column: start / end;
+                        grid-column: start / span end ;
+                    
+                    Linhas:
+                        grid-row: start / end;
+                        grid-row: start / span end;
+
+
+    -->
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+    
+</body>
+</html>

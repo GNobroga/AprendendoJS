@@ -1,0 +1,7 @@
+
+
+ALTER TABLE tipo_produto ADD peso DECIMAL(0,2) NOT NULL;
+
+DROP TABLE nome;
+
+DROP DATABASE nome;

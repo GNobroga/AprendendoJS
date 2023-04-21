@@ -1,0 +1,12 @@
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 10px;
+}
+
+.item {
+    background-color: red;
+    border-radius: 10px;
+}
