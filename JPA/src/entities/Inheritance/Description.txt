@@ -1,0 +1,23 @@
+Anotação na classe pai: 
+    @Inheritance
+    
+Exemplos:
+    1 - @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+    2 - @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+    3 - @Inheritance(strategy = InheritanceType.JOINED)
+
+Sem o Inheritance é utilizado o default que é SINGLE_TABLE
+
+
+DescriminatorColumn - 
+    Servirá para diferenciar o que é o Fathar e o que é o Son.
+    Através disso o JPA entenderá qual classe ele deverá instanciar.
+
+    @DescriminatorColumn( name = "tipo", length = size, discriminatorType = DiscriminatorType.STRING)
+
+Resumindo:
+
+    É tipo Funcionario que tem GERENTE e NORMAL.
+    O JPA colocará o valor do DiscriminatorValue ao efetuar uma persistência 
+    que poderá ser GERENTE ou NORMAL. Já o DiscriminatorColumn servirá 
+    para o JPA criar a coluna que servirá para distinguir o funcionário.

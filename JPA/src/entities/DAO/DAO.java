@@ -1,4 +1,4 @@
-package entities;
+package entities.DAO;
 
 import java.util.List;
 
@@ -15,6 +15,10 @@ public class DAO<E> {
 
     static {
         emf = Persistence.createEntityManagerFactory("studies");
+    }
+
+    public DAO() {
+        em = emf.createEntityManager();
     }
 
     public DAO(Class<E> clazz) {
@@ -35,6 +39,21 @@ public class DAO<E> {
         String jqpl = "SELECT e FROM " + clazz.getName() + " e";
         TypedQuery<E> query = em.createQuery(jqpl, clazz);
         return query.getResultList(); 
+    }
+
+    public List<E> consult(String consultName, Object ...args) {
+        TypedQuery<E> query = em.createNamedQuery(consultName, clazz);
+
+        for (int i = 0 ; i < args.length ; i += 2) {
+            query.setParameter(args[i].toString(), args[i + 1]);
+        }
+
+        return query.getResultList();
+    } 
+
+    public E consultNative(String consultName) {
+        TypedQuery<E> query = em.createNamedQuery(consultName, clazz);
+        return query.getResultList().get(0);
     }
 
     public DAO<E> remove(E e) {

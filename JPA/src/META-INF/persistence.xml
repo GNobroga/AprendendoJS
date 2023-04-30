@@ -5,8 +5,14 @@
              version="2.2">
     <persistence-unit name="studies">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>entities.User</class>
-        <class>entities.Product</class>
+        <mapping-file>META-INF/orm.xml</mapping-file>
+        <class>entities.OneToMany.*</class>
+        <class>entities.OneToOne.*</class>
+        <class>entities.ManyToMany.first_example.*</class>
+        <class>entities.ManyToMany.second_example.*</class>
+        <class>entities.Normal.*</class>
+        <class>entities.Embeddable.*</class>
+        <class>entities.Inheritance.*</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/test"/>

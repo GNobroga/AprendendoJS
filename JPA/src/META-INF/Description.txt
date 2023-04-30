@@ -1,0 +1,14 @@
+
+Named query - Utiliza da linguagem JPQL para fazer consultas e manipulações.
+
+Named Native Query - Utiliza a linguagem SQL para fazer consultas e manipulações.
+
+Existe duas formas:
+
+    1 - Annotation ( Anotar a Classe):
+
+            @NamedQueries(@NameQuery())
+
+    2 - Criar arquivo entity-mappings:
+
+        Esse arquivo serve para mapear sem o uso de anotações.

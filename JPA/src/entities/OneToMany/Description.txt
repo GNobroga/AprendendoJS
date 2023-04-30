@@ -1,0 +1,21 @@
+Conceito de Carregamento Tardio ou Apressado.
+
+EAGER 
+    - O JPA faz uma query SQL para obter todos os dados das entidades relacionadas
+    de uma vez.
+
+LAZY 
+    - O JPA faz várias queries SQL para obter todos os dados das
+     entidades relacionadas. 
+
+        Exemplo: 
+            Quando a relação é muito para muitos e eu tenho uma relação
+            bidirecional, ao usar o getObjects o JPA fará uma nova 
+            consulta e caso o EntityManager esteja fechado poderá 
+            gerar erro. Desse modo, quando temos um cenário desse 
+            é melhor colocar como EAGER que as informações serão 
+            carregadas na primeira consulta SQL.
+USO:
+
+    @ManyToOne( fetch = FetchType.EAGER) // Default
+    @OneToMany( fetch = FetchType.LAZY) // Default

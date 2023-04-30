@@ -1,0 +1,5 @@
+Annotations:
+
+    @JoinColumn 
+
+    @OneToOne(mappedBy = "attribute") // MappedBy para fazer uma relação Bidirecional, ou seja o Cliente tem acesso ao Assento e o Assento tem acesso ao Cliente.

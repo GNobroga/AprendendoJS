@@ -1,0 +1,12 @@
+Annotation:
+    
+    - Configuração da Tabela que será criada por meio da derivação Many To Many. (Opcional)
+    @JoinTable (
+        name = value,
+        joinColumns = @JoinColumn( name = value, referecedColumnName = value),
+        inverseJoinColumns = @JoinColumn( name = value, referecedColumnName = value)
+    
+    )
+
+    joinColumns - É o que vem da entidade recorrente.
+    inverseJoinColumns - É o que vem da outra entidade

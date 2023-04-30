@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.2"
+                  xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm 
+                                      http://xmlns.jcp.org/xml/ns/persistence/orm_2_2.xsd">
+
+    <!-- Utiliza o JPQL -->
+    <named-query name="getAvgMovie">
+        <query>
+            SELECT m FROM Movie m JOIN FETCH m.actors a WHERE m.nota > :nota
+        </query>
+    </named-query>
+
+     <!-- Utiliza o SQL -->
+    <named-native-query name="obterMedia" result-set-mapping="result-avg">
+        <query>
+            SELECT AVG(nota) as media FROM movie
+        </query>
+    </named-native-query>
+
+     <!-- Mapeia o resultado da consulta para a classe especificada -->
+    <sql-result-set-mapping name="result-avg">
+        <constructor-result target-class="entities.NamedNativeQuery.Media">
+            <column name="media" class="java.lang.Double"/>
+        </constructor-result>
+    </sql-result-set-mapping>
+
+
+</entity-mappings>
