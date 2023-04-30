@@ -1,0 +1,39 @@
+Podemos ter relação unidirecional ou bidirecional
+
+
+Exemplo Bidirecional:
+
+    Marido                          Esposa 
+       |                                |
+       --> Esposa                       --> Marido
+
+A partir do marido eu sei quem é a esposa, a partir da esposa eu sei o marido. 
+
+
+Exemplo Bidirecional:
+
+    Mãe                             Filho
+       |                                |
+       --> List<Filhos>                  --> Mãe
+
+A partir da mãe eu sei quem são os filhos e a partir dos filhos a mãe.
+
+
+Exemplo Bidirecional:
+
+    Tio                             Sobrinhos
+       |                                |
+       --> List<Sobrinhos>              -->  List<Tios>
+
+A partir do tio eu sei quem são os sobrinhos e a partir dos sobrinhos a tio.
+
+
+Anotações para Relacionamentos:
+
+    @OneToOne       @OneToOne
+
+    @OneToMany      @ManyToOne
+        |
+        -> List
+
+    @ManyToMany     @ManyToMany
