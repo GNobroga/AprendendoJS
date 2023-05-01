@@ -1,0 +1,60 @@
+Conceitos
+
+São objetos imutáveis, ou seja, não tem como mudar o estado e sim instanciar
+um novo objeto com as caracteristicas que eu necessito.
+
+Principais tipos java (Versão 8+)
+
+Data-hora local
+    LocalDate 
+    LocalDateTime 
+
+Data-hora global 
+    Instant 
+
+Duração
+    Duration
+
+Outros
+    ZoneId
+    ChronoUnit
+
+Datas Locais
+
+    LocalDate
+
+        - Pega  o fuso horário local e só a data
+
+    LocalDateTime
+
+        - Pega  o fuso horário local com a data e hora completa.
+
+
+Data global
+    Instant 
+        - Utiliza de fuso horário
+
+Timezone (Fuso horário)
+
+    GMT - Greenwich Mean Time 
+        Horário padrão do UTC
+        Também chamado de Z time ou Zulu time 
+        Horário de Londres
+
+Padrão ISO 8601
+
+    Datas locais 
+
+        2022-07-21
+        2022-07-21T14:52
+        2022-07-22T14:52:09
+        2022-07-22T14:52:09.4073
+
+
+    Data globais 
+
+        2022-07-23T14:52:09Z
+        2022-07-23T14:52:09.254935Z 
+        2022-07-23T14:52:09-03:00 << Horário GMT - 3 horas
+
+    
