@@ -1,0 +1,10 @@
+Annotations:
+    RequiredArgsConstructor
+    NoArgsConstructor
+    AllArgsConstructor
+    EqualsAndHashCode
+    Getter
+    Setter
+    ToString
+    NonNull
+    

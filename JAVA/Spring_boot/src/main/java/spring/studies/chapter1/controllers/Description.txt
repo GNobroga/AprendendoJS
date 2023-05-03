@@ -1,0 +1,20 @@
+
+Controlador Anotação:
+
+    @RequestMapping
+    @RestController
+
+
+Parâmetros diâmico
+
+    /{name}
+
+    Anotação:
+        @PathVariable
+
+Query params
+
+    /rota?chave=valor&chave=valor
+
+    Anotação:
+        @RequestParam
